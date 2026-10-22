@@ -15,6 +15,7 @@ var staircase = function (n) {
   return result;
 };
 
+
 // Problem 2: Grading Students
 var gradingStudents = function (grades) {
   let result = [];
@@ -31,6 +32,7 @@ var gradingStudents = function (grades) {
   return result;
 };
 
+
 // Problem 3: Time Conversion
 var timeConversion = function (s) {
   let period = s.slice(-2);
@@ -46,6 +48,7 @@ var timeConversion = function (s) {
   return String(hour).padStart(2, "0") + time.slice(2);
 };
 
+
 // Problem 4: String Repeat
 var repeatStr = function (n, s) {
   let result = "";
@@ -56,11 +59,13 @@ var repeatStr = function (n, s) {
   return result;
 };
 
+
 // Problem 5: Reversed Strings
 var solution = function (str) {
   const result = str.split("").reverse().join("");
   return result;
 };
+
 
 // Problem 6: Sum of Positive
 var positiveSum = function (arr) {
@@ -73,6 +78,7 @@ var positiveSum = function (arr) {
   return sum;
 };
 
+
 // Problem 7: Grasshopper --- Summation
 var summation = function (num) {
   let sum = 0;
@@ -82,6 +88,7 @@ var summation = function (num) {
   }
   return sum;
 };
+
 
 // Problem 8: Convert a Boolean to a String
 var booleanToString = function (b) {
@@ -108,5 +115,18 @@ var fizzBuzz = function (n) {
   return result;
 };
 
-console.log(fizzBuzz(15));
+
+// Problem 10: Running Sum of 1D Array
+var runningSum = function(nums) {
+  let result = [];
+  let sum = 0;
+
+  for(let num of nums){
+    result.push(sum += num)
+  }
+ return result;
+};
+
+console.log(runningSum([1, 2, 3, 4]));
+console.log(runningSum([1, 1, 1, 1, 1]));
 
