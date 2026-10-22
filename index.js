@@ -64,5 +64,16 @@ var solution = function(str) {
   return result
 };
 
-console.log(solution("hello"));
-console.log(solution("hayder"));
+// Problem 6: Sum of Positive
+var positiveSum = function(arr) {
+  let sum = 0;
+  for(let num of arr){
+    if(num >= 0){
+      sum += num
+    }
+  }
+  return sum;
+};
+
+console.log(positiveSum([1, -4, 7, 12]));
+console.log(positiveSum([-1, -2, 0, -5]));
