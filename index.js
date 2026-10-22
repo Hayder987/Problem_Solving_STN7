@@ -16,7 +16,6 @@ var staircase = function (n) {
 };
 
 // Problem 2: Grading Students
-
 var gradingStudents = function (grades) {
   let result = [];
 
@@ -32,4 +31,22 @@ var gradingStudents = function (grades) {
   return result;
 };
 
-// console.log(gradingStudents([84, 29, 57]));
+
+// Problem 3: Time Conversion
+var timeConversion = function(s) {
+    let period = s.slice(-2);
+    let time = s.slice(0, 8);
+    let hour = Number(s.slice(0, 2));
+
+    if (period === "AM" && hour === 12) {
+        hour = 0;
+    } else if (period === "PM" && hour !== 12) {
+        hour += 12;
+    }
+
+    return String(hour).padStart(2, "0") + time.slice(2);
+};
+
+// console.log(timeConversion("07:05:45PM"));
+// console.log(timeConversion("12:00:00AM"));
+
