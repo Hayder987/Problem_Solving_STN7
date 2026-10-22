@@ -51,12 +51,18 @@ var timeConversion = function(s) {
 // Problem 4: String Repeat
 var repeatStr = function(n, s) {
   let result="";
-  
+
   for(let i=1; i<=n; i++){
     result += s
   }
   return result;
 };
 
-console.log(repeatStr(3, "ha"));
-console.log(repeatStr(0, "hello"));
+// Problem 5: Reversed Strings
+var solution = function(str) {
+  const result = str.split("").reverse().join("")
+  return result
+};
+
+console.log(solution("hello"));
+console.log(solution("hayder"));
