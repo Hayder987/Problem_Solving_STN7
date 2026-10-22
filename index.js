@@ -15,7 +15,6 @@ var staircase = function (n) {
   return result;
 };
 
-
 // Problem 2: Grading Students
 var gradingStudents = function (grades) {
   let result = [];
@@ -32,7 +31,6 @@ var gradingStudents = function (grades) {
   return result;
 };
 
-
 // Problem 3: Time Conversion
 var timeConversion = function (s) {
   let period = s.slice(-2);
@@ -48,7 +46,6 @@ var timeConversion = function (s) {
   return String(hour).padStart(2, "0") + time.slice(2);
 };
 
-
 // Problem 4: String Repeat
 var repeatStr = function (n, s) {
   let result = "";
@@ -59,13 +56,11 @@ var repeatStr = function (n, s) {
   return result;
 };
 
-
 // Problem 5: Reversed Strings
 var solution = function (str) {
   const result = str.split("").reverse().join("");
   return result;
 };
-
 
 // Problem 6: Sum of Positive
 var positiveSum = function (arr) {
@@ -78,7 +73,6 @@ var positiveSum = function (arr) {
   return sum;
 };
 
-
 // Problem 7: Grasshopper --- Summation
 var summation = function (num) {
   let sum = 0;
@@ -89,12 +83,10 @@ var summation = function (num) {
   return sum;
 };
 
-
 // Problem 8: Convert a Boolean to a String
 var booleanToString = function (b) {
   return b ? "true" : "false";
 };
-
 
 // Problem 9: Fizz Buzz
 var fizzBuzz = function (n) {
@@ -115,35 +107,49 @@ var fizzBuzz = function (n) {
   return result;
 };
 
-
 // Problem 10: Running Sum of 1D Array
-var runningSum = function(nums) {
+var runningSum = function (nums) {
   let result = [];
   let sum = 0;
 
-  for(let num of nums){
-    result.push(sum += num)
+  for (let num of nums) {
+    result.push((sum += num));
   }
- return result;
+  return result;
 };
 
 // Problem 11: Richest Customer Wealth
-var maximumWealth = function(accounts) {
+var maximumWealth = function (accounts) {
   let result = 0;
 
-  for(let account of accounts){
+  for (let account of accounts) {
     let sum = 0;
 
-    for(item of account){
-     sum += item 
+    for (item of account) {
+      sum += item;
     }
-    if(sum >= result){
-      result = sum
+    if (sum >= result) {
+      result = sum;
     }
   }
-  return result
+  return result;
 };
 
+// Problem 12: Remove Duplicates from Sorted Array
+var removeDuplicates = function (nums) {
+  if (nums.length === 0) return 0;
 
-console.log(maximumWealth([[1, 2, 3], [3, 2, 1]]))
-console.log(maximumWealth([[1, 5], [7, 3], [3, 5]]))
+  let x = 1;
+
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] !== nums[x - 1]) {
+      nums[x] = nums[i];
+      x++;
+    }
+  }
+
+  return x;
+};
+
+// console.log(removeDuplicates([1, 1, 2]));
+
