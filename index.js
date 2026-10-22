@@ -127,6 +127,23 @@ var runningSum = function(nums) {
  return result;
 };
 
-console.log(runningSum([1, 2, 3, 4]));
-console.log(runningSum([1, 1, 1, 1, 1]));
+// Problem 11: Richest Customer Wealth
+var maximumWealth = function(accounts) {
+  let result = 0;
 
+  for(let account of accounts){
+    let sum = 0;
+
+    for(item of account){
+     sum += item 
+    }
+    if(sum >= result){
+      result = sum
+    }
+  }
+  return result
+};
+
+
+console.log(maximumWealth([[1, 2, 3], [3, 2, 1]]))
+console.log(maximumWealth([[1, 5], [7, 3], [3, 5]]))
