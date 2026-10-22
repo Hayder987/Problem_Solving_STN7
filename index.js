@@ -77,10 +77,16 @@ var positiveSum = function (arr) {
 var summation = function (num) {
   let sum = 0;
 
-  for (let i=1; i<=num; i++) {
+  for (let i = 1; i <= num; i++) {
     sum += i;
   }
   return sum;
 };
 
-console.log(summation(8));
+// Problem 8: Convert a Boolean to a String
+var booleanToString = function (b) {
+  return b ? 'true' : 'false';
+};
+
+console.log(booleanToString(true));
+console.log(booleanToString(false));
