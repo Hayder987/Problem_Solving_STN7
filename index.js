@@ -31,49 +31,56 @@ var gradingStudents = function (grades) {
   return result;
 };
 
-
 // Problem 3: Time Conversion
-var timeConversion = function(s) {
-    let period = s.slice(-2);
-    let time = s.slice(0, 8);
-    let hour = Number(s.slice(0, 2));
+var timeConversion = function (s) {
+  let period = s.slice(-2);
+  let time = s.slice(0, 8);
+  let hour = Number(s.slice(0, 2));
 
-    if (period === "AM" && hour === 12) {
-        hour = 0;
-    } else if (period === "PM" && hour !== 12) {
-        hour += 12;
-    }
+  if (period === "AM" && hour === 12) {
+    hour = 0;
+  } else if (period === "PM" && hour !== 12) {
+    hour += 12;
+  }
 
-    return String(hour).padStart(2, "0") + time.slice(2);
+  return String(hour).padStart(2, "0") + time.slice(2);
 };
 
-
 // Problem 4: String Repeat
-var repeatStr = function(n, s) {
-  let result="";
+var repeatStr = function (n, s) {
+  let result = "";
 
-  for(let i=1; i<=n; i++){
-    result += s
+  for (let i = 1; i <= n; i++) {
+    result += s;
   }
   return result;
 };
 
 // Problem 5: Reversed Strings
-var solution = function(str) {
-  const result = str.split("").reverse().join("")
-  return result
+var solution = function (str) {
+  const result = str.split("").reverse().join("");
+  return result;
 };
 
 // Problem 6: Sum of Positive
-var positiveSum = function(arr) {
+var positiveSum = function (arr) {
   let sum = 0;
-  for(let num of arr){
-    if(num >= 0){
-      sum += num
+  for (let num of arr) {
+    if (num >= 0) {
+      sum += num;
     }
   }
   return sum;
 };
 
-console.log(positiveSum([1, -4, 7, 12]));
-console.log(positiveSum([-1, -2, 0, -5]));
+// Problem 7: Grasshopper --- Summation
+var summation = function (num) {
+  let sum = 0;
+
+  for (let i=1; i<=num; i++) {
+    sum += i;
+  }
+  return sum;
+};
+
+console.log(summation(8));
