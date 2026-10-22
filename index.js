@@ -47,6 +47,16 @@ var timeConversion = function(s) {
     return String(hour).padStart(2, "0") + time.slice(2);
 };
 
-// console.log(timeConversion("07:05:45PM"));
-// console.log(timeConversion("12:00:00AM"));
 
+// Problem 4: String Repeat
+var repeatStr = function(n, s) {
+  let result="";
+  
+  for(let i=1; i<=n; i++){
+    result += s
+  }
+  return result;
+};
+
+console.log(repeatStr(3, "ha"));
+console.log(repeatStr(0, "hello"));
