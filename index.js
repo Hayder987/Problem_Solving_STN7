@@ -275,9 +275,17 @@ var reverseString = function(s) {
         left++;
         right--;
     }
+    return s
 };
 
-let s = ["h", "e", "l", "l", "o"];
+// Problem 19: Length of Last Word
+var lengthOfLastWord = function(s) {
+    let words = s.trim().split(/\s+/);
 
-reverseString(s);
+    return words[words.length - 1].length;
+};
+
+console.log(lengthOfLastWord("Hello World"));
+console.log(lengthOfLastWord(" fly me to the moon "));
+
 
