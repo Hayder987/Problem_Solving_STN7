@@ -262,5 +262,22 @@ var plusOne = function (digits) {
   return digits;
 };
 
-console.log(plusOne([1, 2, 9]));
-console.log(plusOne([2, 2, 2]));
+// Problem 18: Reverse String
+var reverseString = function(s) {
+    let left = 0;
+    let right = s.length - 1;
+
+    while (left < right) {
+        let temp = s[left];
+        s[left] = s[right];
+        s[right] = temp;
+
+        left++;
+        right--;
+    }
+};
+
+let s = ["h", "e", "l", "l", "o"];
+
+reverseString(s);
+
