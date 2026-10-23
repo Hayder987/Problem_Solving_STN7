@@ -285,7 +285,27 @@ var lengthOfLastWord = function(s) {
     return words[words.length - 1].length;
 };
 
-console.log(lengthOfLastWord("Hello World"));
-console.log(lengthOfLastWord(" fly me to the moon "));
+
+// Problem 20: Longest Common Prefix
+var longestCommonPrefix = function(strs) {
+    if (strs.length === 0) {
+        return "";
+    }
+
+    let prefix = strs[0];
+
+    for (let i = 1; i < strs.length; i++) {
+        while (!strs[i].startsWith(prefix)) {
+            prefix = prefix.slice(0, -1);
+
+            if (prefix === "") {
+                return "";
+            }
+        }
+    }
+
+    return prefix;
+};
+
 
 
